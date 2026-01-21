@@ -244,15 +244,15 @@ Controlled resource usage
 
 
 
-Error 	        Cause	                          Fix
+Error 	           Cause	                          Fix
 
-Redis        ConnectionFailure	             Redis not running	Start Redis
-
-
-Topic          not present	                 Topic missing	Create topic
+Redis     ----   ConnectionFailure	       --      Redis not running	Start Redis
 
 
-Kafka            Timeout	                   Broker mismatch	Fix advertised.listeners
+Topic     ----   not present	           ----      Topic missing	Create topic
 
 
-500               error	                     Dependency downCheck logs
+Kafka      ----     Timeout	          ----         Broker mismatch	Fix advertised.listeners
+
+
+500       ----        error	            ----         Dependency downCheck logs
