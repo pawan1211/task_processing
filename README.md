@@ -44,14 +44,20 @@ Clean layered architecture
 
 Client
   ↓
+  
 REST API (Spring Boot)
+  
   ↓
+
 Database (JPA / Hibernate)  ← Source of Truth
   ↓
+
 Redis (Cache task status)
   ↓
+
 Kafka (Async Queue)
   ↓
+
 Worker (Kafka Consumer + Thread Pool)
 
 🧩 Project Structure
@@ -236,12 +242,17 @@ Controlled resource usage
 
 🚨 Common  Errors & Fixes
 
-Error 	 Cause	               Fix
 
-Redis  ConnectionFailure	 Redis not running	Start Redis
 
-Topic  not present	       Topic missing	Create topic
+Error 	        Cause	                          Fix
 
-Kafka  Timeout	           Broker mismatch	Fix advertised.listeners
+Redis        ConnectionFailure	             Redis not running	Start Redis
 
-500    error	             Dependency downCheck logs
+
+Topic          not present	                 Topic missing	Create topic
+
+
+Kafka            Timeout	                   Broker mismatch	Fix advertised.listeners
+
+
+500               error	                     Dependency downCheck logs
